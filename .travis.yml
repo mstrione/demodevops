@@ -1,14 +1,12 @@
 language: node_js
 node_js:
-- '6'
+- '8'
 before_install:
 - npm install -g @angular/cli
 install: npm install
 branches:
   only:
   - master
-after_script:
-- chmod +x publish-gh-pages.sh && ./publish-gh-pages.sh
 deploy:
   api_key:
     secure: t8RFG+nXhwa8+DersBwDqd6bfWpF/Bf8QL88aFNzaVENDalRPj2cc9dt6FVSBoGZPHn5u/7j0XXBGmroLUyl/FQB37dzBxGpPsrqq+0pEDffBDlzckmqwXK41xhMOBaMDGp4vhKYl/4/kTs1jmqppmDsMvIgsOtej34o1OLkZcVnusvfek4+Rv4A6Z2PZX94VBNqqH+8lEedaeNbZlACQ5oPJSzf4HdBLZatNqYahY1ocjUq0F/Rw8l3vGvxqna2HnKMBL0tCjHMOPNtIRIWdQWz2q7rTdjoQxGJxfZ5AuBCvuVjFd8zTgzVrI3Fl/k9xStfypQ9vqXrnaH85EBiYVDFloI3Kjh3UiHcVYHg2OYpMDN9ClQmLHFLnqXGhSG/1QeaMbcMfMhBpfwkLoRZZw/q0+ywnvZRVAP6kNN1lBEIYlsQ381TdkBkYoGNWGJ66jtj5p+lz0yJV0WuM8vu3Ef2hmgcKTag4fWHQVjpOcHkwK6v4fGYMIgLC8IUXKoVs1bgANXpG4oVhIpoFqoXlUGb+dDBcahJGMNHIagFlGx6QjlUFPoSs8BaO0lYkMTiWmshx5onWtOCVYfUdfrEnHp29YJgSbG3dAkMqeE1fcr1ehUe6b8stD8qkaLBelXoDCCmRxmkMl5tkSE01W4xRcHxRQLfoEMLPLNox2+PRqs=
