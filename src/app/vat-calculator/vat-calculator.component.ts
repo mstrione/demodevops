@@ -16,8 +16,7 @@ export class VatCalculatorComponent implements OnInit {
   ngOnInit() {
   }
 
-  private calculateTax(value) {
-    alert(value);
+  calculateTax(value) {
    this.afterTax = 0;
   }
 

@@ -1,5 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { FormsModule } from '@angular/forms';
 import { VatCalculatorComponent } from './vat-calculator.component';
 
 describe('VatCalculatorComponent', () => {
@@ -8,6 +8,9 @@ describe('VatCalculatorComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      imports: [
+        FormsModule
+      ],
       declarations: [ VatCalculatorComponent ]
     })
     .compileComponents();
@@ -21,5 +24,10 @@ describe('VatCalculatorComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  it ('#calculateTax should return 0 if value is 0', () => {
+    component.calculateTax(0);
+    expect(component.afterTax).toEqual(0);
   });
 });
