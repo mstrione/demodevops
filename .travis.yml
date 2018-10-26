@@ -1,15 +1,25 @@
 sudo: required
+cache: yarn
 addons:
   chrome: stable
+  sonarcloud:
+    organization: "mstrione-github"
+    token:
+      secure: $SONAR_TOKEN
+
 language: node_js
 node_js:
 - '10'
 before_install:
 - npm install -g @angular/cli
-install: npm install
+install: 
+- npm install
+- yarn install
 script:
   - ng build --prod --aot
   - ng test
+  - yarn build
+  - sonar-scanner
 branches:
   only:
   - master
