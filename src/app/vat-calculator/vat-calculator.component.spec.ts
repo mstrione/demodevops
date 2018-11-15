@@ -48,4 +48,16 @@ describe('VatCalculatorComponent', () => {
     expect(compiled.querySelector('#afterTax').textContent).toContain('Valor con impuesto: 110');
   });
 
+  it ('#calculateTax should return 1150000 if value is 1000000', () => {
+    component.calculateTax(1000000);
+    expect(component.afterTax).toEqual(1150000);
+  });
+
+  it('should render "Valor con impuesto: 1150000" in p with ID "afterTax" if value is 1000000', () => {
+    component.calculateTax(1000000);
+    fixture.detectChanges();
+    const compiled = fixture.debugElement.nativeElement;
+    expect(compiled.querySelector('#afterTax').textContent).toContain('Valor con impuesto: 1150000');
+  });
+
 });
