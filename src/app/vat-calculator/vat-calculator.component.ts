@@ -8,6 +8,7 @@ import { FormControl } from '@angular/forms';
 })
 export class VatCalculatorComponent implements OnInit {
 
+  beforeTax;
   afterTax;
 
   constructor() {}
