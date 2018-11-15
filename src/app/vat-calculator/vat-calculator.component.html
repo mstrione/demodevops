@@ -2,9 +2,9 @@
 
     <div class=" form-inline">
         <div class="form-group mx-sm-3 mb-2">
-            <input type="text" [(ngModel)]="cantidad" class="form-control" placeholder="Ingrese valor" />
+            <input type="text" [(ngModel)]="beforeTax" class="form-control" placeholder="Ingrese valor" />
         </div>
-        <button class="btn btn-primary mb-2" (click)="calculateTax(cantidad)">Calcular impuesto</button>
+        <button class="btn btn-primary mb-2" (click)="calculateTax(beforeTax)">Calcular impuesto</button>
 
     </div>
     <hr>

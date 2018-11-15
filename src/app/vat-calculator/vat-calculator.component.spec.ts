@@ -30,4 +30,15 @@ describe('VatCalculatorComponent', () => {
     component.calculateTax(0);
     expect(component.afterTax).toEqual(0);
   });
+
+  it ('#calculateTax should return 110 if value is 100', () => {
+    component.calculateTax(100);
+    expect(component.afterTax).toEqual(110);
+  });
+
+  it ('#calculateTax should return --- if value is not a number', () => {
+    component.calculateTax('TEXTO');
+    expect(component.afterTax).toEqual('---');
+  });
+
 });

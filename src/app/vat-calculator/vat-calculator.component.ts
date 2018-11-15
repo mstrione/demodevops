@@ -17,8 +17,14 @@ export class VatCalculatorComponent implements OnInit {
   }
 
   calculateTax(value) {
-   alert(value);
-   this.afterTax = value;
+   let taxIndex = 10;
+   value = parseFloat(value);
+   if (isNaN(value)) {
+    this.afterTax = '---';
+   } else {
+    this.afterTax = value + (value * 1 / taxIndex);
+   }
+
   }
 
 }
