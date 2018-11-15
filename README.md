@@ -1,5 +1,13 @@
 # Demodevops
 
+This project includes: 
+- Code repository: Git / Gihub (https://github.com/agile-doms/demodevops)
+- Code languaje & framework: TypeScript (JS) / Angular 7.0 (node.js [npm], webpack)
+- Automated test: Jasmine + Karma
+- CI: Travis CI (https://travis-ci.org)
+- Static code analisys: (https://sonarcloud.io)
+- Server: Heroku (https://demodevops.herokuapp.com/)
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.0.1.
 
 ## Development server
