@@ -8,7 +8,6 @@ import { FormControl } from '@angular/forms';
 })
 export class VatCalculatorComponent implements OnInit {
 
-  cantidad;
   afterTax;
 
   constructor() {}
@@ -17,13 +16,15 @@ export class VatCalculatorComponent implements OnInit {
   }
 
   calculateTax(value) {
-   let taxIndex = 10;
-   value = parseFloat(value);
-   if (isNaN(value)) {
-    this.afterTax = '---';
-   } else {
-    this.afterTax = value + (value * 1 / taxIndex);
-   }
+    const taxIndex = 10;
+    let tax;
+    value = parseFloat(value);
+    if (isNaN(value)) {
+      this.afterTax = '---';
+    } else {
+      tax = (value * 1 / taxIndex);
+      this.afterTax = value + tax ;
+    }
 
   }
 
