@@ -8,8 +8,7 @@ import { FormControl } from '@angular/forms';
 })
 export class VatCalculatorComponent implements OnInit {
 
-  value = 'Sin valor';
-  afterTax = -1;
+  afterTax = '---';
 
   constructor() {}
 
@@ -17,7 +16,7 @@ export class VatCalculatorComponent implements OnInit {
   }
 
   calculateTax(value) {
-   this.afterTax = 0;
+   alert(value);
   }
 
 }

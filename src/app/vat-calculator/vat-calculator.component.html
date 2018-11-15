@@ -1,8 +1,13 @@
-<div class="borderDiv">
+<div class="alert alert-info" role="alert">
 
-    <input type="text" [(ngModel)]="value" />
-    <button class="btn" (click)="calculateTax(value)">Calcular impuesto</button>
+    <div class=" form-inline">
+        <div class="form-group mx-sm-3 mb-2">
+            <input type="text" [(ngModel)]="cantidad" class="form-control" placeholder="Ingrese valor" />
+        </div>
+        <button class="btn btn-primary mb-2" (click)="calculateTax(cantidad)">Calcular impuesto</button>
 
-    <br>
-    <span class="result">Valor con impuesto: {{afterTax}}</span>
+    </div>
+    <hr>
+    <p class="mb-0">Valor con impuesto: {{afterTax }}</p>
+
 </div>
