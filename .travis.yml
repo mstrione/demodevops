@@ -3,7 +3,7 @@ cache: yarn
 addons:
   chrome: stable
   sonarcloud:
-    organization: "mstrione-github"
+    organization: "agile-doms"
     token:
       secure: $SONAR_TOKEN
 
