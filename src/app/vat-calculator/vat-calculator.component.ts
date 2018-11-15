@@ -24,7 +24,7 @@ export class VatCalculatorComponent implements OnInit {
     if (isNaN(value)) {
       this.afterTax = '---';
     } else {
-      if(value >= 1000000 ) {
+      if ( value >= 1000000 ) {
         taxIndex = 15;
       } else {
         taxIndex = 10;
