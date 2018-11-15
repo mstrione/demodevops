@@ -10,6 +10,7 @@ export class VatCalculatorComponent implements OnInit {
 
   beforeTax;
   afterTax;
+  tax;
 
   constructor() {}
 
@@ -23,7 +24,8 @@ export class VatCalculatorComponent implements OnInit {
     if (isNaN(value)) {
       this.afterTax = '---';
     } else {
-      tax = (value * 1 / taxIndex);
+      tax = (value * (taxIndex / 100));
+      this.tax = tax;
       this.afterTax = value + tax ;
     }
 
