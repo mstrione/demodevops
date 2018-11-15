@@ -8,8 +8,8 @@ import { FormControl } from '@angular/forms';
 })
 export class VatCalculatorComponent implements OnInit {
 
-  cantidad = '';
-  afterTax = '---';
+  cantidad;
+  afterTax;
 
   constructor() {}
 
