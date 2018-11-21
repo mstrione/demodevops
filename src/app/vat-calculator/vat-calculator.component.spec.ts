@@ -63,4 +63,11 @@ describe('VatCalculatorComponent', () => {
     expect(component.afterTax).toEqual(2300000);
   });
 
+  it('should render "Impuesto: 10" in p with ID "tax" if value is 100', () => {
+    component.calculateTax(100);
+    fixture.detectChanges();
+    const compiled = fixture.debugElement.nativeElement;
+    expect(compiled.querySelector('#tax').textContent).toContain('Impuesto: 10');
+  });
+
 });

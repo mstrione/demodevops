@@ -10,6 +10,7 @@ export class VatCalculatorComponent implements OnInit {
 
   beforeTax;
   afterTax;
+  tax;
 
   constructor() {}
 
@@ -29,6 +30,7 @@ export class VatCalculatorComponent implements OnInit {
         taxIndex  = 10;
       }
       tax = (value * (taxIndex / 100));
+      this.tax = tax;
       this.afterTax = value + tax ;
     }
   }
