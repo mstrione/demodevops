@@ -1,12 +1,14 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div class="container">
-    <div class="jumbotron text-center">
-        <h1 class="display-4">Bienvenidos a {{ title }}!</h1>
-        <img width="200" alt="Demo Devops" src="http://blogs.itpro.es/eduardocloud/files/2018/07/DevOps-Main-Figure.png">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">DemoDevops</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+            <a class="nav-item nav-link active" routerLink="/" routerLinkActive="active">Inicio <span class="sr-only">(current)</span></a>
+            <a class="nav-item nav-link" routerLink="/about" routerLinkActive="active">Acerca de este proyecto</a>
+        </div>
     </div>
-
-    <app-vat-calculator></app-vat-calculator>
-
-</div>
+</nav>
 
 <router-outlet></router-outlet>

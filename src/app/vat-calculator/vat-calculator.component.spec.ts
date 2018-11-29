@@ -22,6 +22,17 @@ describe('VatCalculatorComponent', () => {
     fixture.detectChanges();
   });
 
+  it(`should have as title 'demodevops'`, () => {
+    const app = fixture.debugElement.componentInstance;
+    expect(app.title).toEqual('demodevops');
+  });
+
+  it('should render title in a h1 tag', () => {
+    fixture.detectChanges();
+    const compiled = fixture.debugElement.nativeElement;
+    expect(compiled.querySelector('h1').textContent).toContain('Bienvenidos a demodevops!');
+  });
+
   it('should create', () => {
     expect(component).toBeTruthy();
   });

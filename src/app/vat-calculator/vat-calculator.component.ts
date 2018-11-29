@@ -7,7 +7,7 @@ import { FormControl } from '@angular/forms';
   styleUrls: ['./vat-calculator.component.sass']
 })
 export class VatCalculatorComponent implements OnInit {
-
+  title = 'demodevops';
   beforeTax;
   afterTax;
   tax;
