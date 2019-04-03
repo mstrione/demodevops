@@ -64,5 +64,14 @@ describe('VatCalculatorComponent', () => {
     expect(component.afterTax).toEqual(1099998.9);
   });
 
+  it ('#calculateTax should return 1.150.000 if value is 1.000.000', () => {
+    component.calculateTax(1000000);
+    expect(component.afterTax).toEqual(1150000);
+  });
+
+  it ('#calculateTax should return 2.300.000 if value is 2.000.000', () => {
+    component.calculateTax(2000000);
+    expect(component.afterTax).toEqual(2300000);
+  });
 
 });
