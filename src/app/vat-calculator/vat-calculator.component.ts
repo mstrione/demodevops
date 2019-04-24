@@ -18,12 +18,10 @@ export class VatCalculatorComponent implements OnInit {
   }
 
   calculateTax(value) {
-    let taxIndex = 10;
+    const taxIndex = 10;
     let tax;
     value = parseFloat(value);
-    if(value >= 1000000) {
-      taxIndex = 15;
-    } 
+
     if (isNaN(value)) {
       this.afterTax = '---';
     } else {
