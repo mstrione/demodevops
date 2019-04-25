@@ -59,4 +59,5 @@ describe('VatCalculatorComponent', () => {
     expect(compiled.querySelector('#afterTax').textContent).toContain('Valor con impuesto: 110');
   });
 
+
 });

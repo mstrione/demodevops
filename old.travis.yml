@@ -1,0 +1,31 @@
+sudo: required
+cache: yarn
+addons:
+  chrome: stable
+  sonarcloud:
+    organization: agile-doms
+    token:
+      secure: "$SONAR_TOKEN"
+language: node_js
+node_js:
+- '10'
+before_install:
+- npm install -g @angular/cli
+install:
+- npm install
+- yarn install
+script:
+- ng build --prod --aot
+- ng test
+- yarn build
+- sonar-scanner
+branches:
+  only:
+  - master
+deploy:
+  provider: heroku
+  api_key:
+    secure: tn+rlVBQzIUHJkCN4PQBbclgFLB+nyJZOxVq6vVu64fOHRItx9nyez1Nxb3lgEDg2BljjWuT0KIxQEe8Wvc+kqHj5TFgWrbT+AqbvBjekXDz0icqF9vI833sqjIKXpJRLsHXX/MpR+Vpb4jYktfiFmlxiFOMMT+ujjLrBzGBdp7jJuie8ZcGMHPjaDmGQbwlULAobBLPHtZsg00vLXdTLw8Z3AUf4GWM7oIKBK7Q4O6FLTaB93/GcmIY1s1QChF38CNw2m526w5VOUiQRVpceSSg4JOIm95MEKoWkGuwj/v25oHPef+I730qKj8fGcRne87pQY6+lYj4MqTMTfw5S9PPAIIx14qe9wUhpNNkD0YfRAxwVGRgH3rYCUgDNWNIruyk3/IyDE9T/SOx3unL9c9lMmuE+XoIgPI/B83z/5mq28SfmtVvIi5OIrxKUnQ1QGIaHsoQJLhmT5xwb02RSeodrgWfelyX0Y2MnE+aNewHvmrQrXzbcEH9S3RXXf5ytSPZJUk9I8gySj0uYim9xLgz+I4HculFLLa+mkvXiMk2erR2a8vcPeTmZ0GkTRMqB5VVwGCnuKaAnSE7qlsH57CBNKMhQ9WAF3lQ5ojl9yTvnbg3DDW/4JMJTvRLTCCJPCeOnYA7EcEwH+Lwxm67LGJ2zO8rjcoDswEXEa7SYvM=
+  app: demodevops
+  on:
+    repo: agile-doms/demodevops

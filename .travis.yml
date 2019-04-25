@@ -3,30 +3,29 @@ cache: yarn
 addons:
   chrome: stable
   sonarcloud:
-    organization: "agile-doms"
+    organization: agile-doms
     token:
-      secure: $SONAR_TOKEN
-
+      secure: "$SONAR_TOKEN"
 language: node_js
 node_js:
 - '10'
 before_install:
 - npm install -g @angular/cli
-install: 
+install:
 - npm install
 - yarn install
 script:
-  - ng build --prod --aot
-  - ng test
-  - yarn build
-  - sonar-scanner
+- ng build --prod --aot
+- ng test
+- yarn build
+- sonar-scanner
 branches:
   only:
   - master
 deploy:
   provider: heroku
   api_key:
-    secure: t8RFG+nXhwa8+DersBwDqd6bfWpF/Bf8QL88aFNzaVENDalRPj2cc9dt6FVSBoGZPHn5u/7j0XXBGmroLUyl/FQB37dzBxGpPsrqq+0pEDffBDlzckmqwXK41xhMOBaMDGp4vhKYl/4/kTs1jmqppmDsMvIgsOtej34o1OLkZcVnusvfek4+Rv4A6Z2PZX94VBNqqH+8lEedaeNbZlACQ5oPJSzf4HdBLZatNqYahY1ocjUq0F/Rw8l3vGvxqna2HnKMBL0tCjHMOPNtIRIWdQWz2q7rTdjoQxGJxfZ5AuBCvuVjFd8zTgzVrI3Fl/k9xStfypQ9vqXrnaH85EBiYVDFloI3Kjh3UiHcVYHg2OYpMDN9ClQmLHFLnqXGhSG/1QeaMbcMfMhBpfwkLoRZZw/q0+ywnvZRVAP6kNN1lBEIYlsQ381TdkBkYoGNWGJ66jtj5p+lz0yJV0WuM8vu3Ef2hmgcKTag4fWHQVjpOcHkwK6v4fGYMIgLC8IUXKoVs1bgANXpG4oVhIpoFqoXlUGb+dDBcahJGMNHIagFlGx6QjlUFPoSs8BaO0lYkMTiWmshx5onWtOCVYfUdfrEnHp29YJgSbG3dAkMqeE1fcr1ehUe6b8stD8qkaLBelXoDCCmRxmkMl5tkSE01W4xRcHxRQLfoEMLPLNox2+PRqs=
+    secure: pAazSvI0j5Lc2+2WJeZejTXpuE1oXmNDyjGynTyiNaG8PzlzrVKDFTAh6iUvYQ0cViefo+HCNupFFtQzVQnIro3Xr6X+gXhorERNWgpaqL+m1hcsGdM6fWWpRvjAWYjGyy1OzWt2py4BKLs3ORrq39SuZc+ZvcmunR6Ptd5qRuZWYp5sEZu8qQn5vo35en2f0ruoQDNAnpKagDkPOCq6fBGZadnCF8r/qmEDBG3kUhAaLeLgZkJYxoqKyr81vl3GJ6Cy/rMrgA6P5QdORaDAjgo3/Q1+Zr2wjyWIdBzFy7ORjrzkJa8lL91EJoJG3XjTzs+dQbffwafg3Ajea8GuowLkqOBPu5uzseZ+emBwEgqhWhqUALJ3LhaaDNxcy8xIj34eOV5KnPVtyArkH8FMMnOV1sRvpf+Eb9bTx0I5QL25Sa+jAI+/2aGfo6/bZrv/p8c3MAdVMOemCqLG3r2sHi3g2UniJhwz7LTj3X2RxnZ4nEhTgywE8K/1fPvyqZgUSmUGsb2C2tsvqVG+8wgrpKaXtqDM4SDt7yxddu4Yqf+TO6BHRy4bkC73Hc1jnuLWwPlTuCmJPYLH1k8lboAlLz7fNAVVcfyFi3DyH0K9mDy5iKRFZ1bYRi48oF48fKlZh2pAnIUvMFpbK+1J1ycCX4tTZvbfeNS8HJe2eoq4nhM=
   app: demodevops
   on:
     repo: agile-doms/demodevops
