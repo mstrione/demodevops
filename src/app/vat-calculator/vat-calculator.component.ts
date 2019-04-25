@@ -11,7 +11,6 @@ export class VatCalculatorComponent implements OnInit {
   beforeTax;
   afterTax;
  
-
   constructor() {}
 
   ngOnInit() {
@@ -30,5 +29,4 @@ export class VatCalculatorComponent implements OnInit {
       this.afterTax = value + tax ;
     }
   }
-
 }
