@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
+import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
 
 @Component({
   selector: 'app-vat-calculator',
@@ -10,6 +11,7 @@ export class VatCalculatorComponent implements OnInit {
   title = 'demodevops';
   beforeTax;
   afterTax;
+  tax; //Rodri
 
   constructor() {}
 
@@ -29,6 +31,7 @@ export class VatCalculatorComponent implements OnInit {
       }
       tax = (value * (taxIndex / 100));
       this.afterTax = value + tax ;
+      this.tax = tax; //Rodri
     }
   }
 }
