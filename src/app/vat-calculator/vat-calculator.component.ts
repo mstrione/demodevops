@@ -10,20 +10,23 @@ export class VatCalculatorComponent implements OnInit {
   title = 'demodevops';
   beforeTax;
   afterTax;
- 
+
   constructor() {}
 
   ngOnInit() {
   }
 
   calculateTax(value) {
-    const taxIndex = 10;
+    let taxIndex = 10;
     let tax;
     value = parseFloat(value);
 
     if (isNaN(value)) {
       this.afterTax = '---';
     } else {
+      if (value >= 1000000)  {
+        taxIndex = 15;
+      }
       tax = (value * (taxIndex / 100));
       this.afterTax = value + tax ;
     }
